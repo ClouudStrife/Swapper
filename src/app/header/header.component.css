@@ -1,0 +1,31 @@
+.nav-link:hover{
+    background-color: rgb(136, 135, 135);
+}
+
+.nav-link{
+    background-color: rgb(12, 11, 11);
+}
+
+
+.nav-item a{
+    color:white;
+    padding: 16px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#title_header{
+    color:white;
+    margin-left: 1%;
+    font-family: 'Nixie One', cursive;
+    font-size: 25px;
+}
+
+#header {
+    background-color: rgb(12, 11, 11);
+    padding: 0;
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+}
+

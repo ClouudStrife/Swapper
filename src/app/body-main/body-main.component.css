@@ -1,0 +1,40 @@
+
+h1{
+    color: white;
+    font-family: 'Nixie One', cursive;
+    font-size: 50px;
+    margin-top: -20px;
+}
+
+h2{
+    color: white;
+    font-family: 'Sintony', sans-serif;
+    font-size: 50px;
+    margin-top: 10%;
+}
+
+
+.img-fluid{
+    width: 200px;
+    height: 200px;
+}
+
+.btn_body{
+    margin-top: 115px;
+}
+
+.btn_body a{
+    background-color: #11917d;
+    color: white;
+    font-family:'Quicksand', sans-serif; 
+    font-size: 24px;
+}
+
+.btn_body a:hover{
+    background-color: #00cc99;
+}
+
+.container{
+    display: table-cell;
+    vertical-align: middle;
+}

@@ -1,0 +1,71 @@
+h1{
+    font-family: 'M PLUS 1p', sans-serif;
+    color: white;
+    font-size: 45px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+hr{
+    background-color: white;
+    width: 50%;
+}
+
+.container{
+    padding-top: 50px;
+}
+
+.btn{
+    width: 200px;
+    height: 200px;
+    border-color: rgba(255, 255, 255, 0.589);
+    padding: 10px;
+}
+
+.btn:hover{
+    background-color: #f75353de;
+    border: none;
+}
+
+.btn h4{
+    opacity: 0;
+    margin-top: -5px;
+}
+
+.btn:hover h4{
+    opacity: 1;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #c23131;
+    border-color:#c23131;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+.fas{
+ color:white;
+ margin-top: 30px;  
+}
+
+h4{
+    color: white;
+    padding-top: 8px;
+}
+
+#linha-2{
+    padding-top: 20px;
+}
+
+.col{
+    padding-top: 10px;
+}

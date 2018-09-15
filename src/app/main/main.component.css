@@ -1,0 +1,69 @@
+.corpo{
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.categorias{
+    background-color: #952a2a;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    padding-top: 90px;
+    text-align: center;
+}
+
+.introdução{
+    padding-top: 65px;
+}
+
+#carouselExampleFade{
+    background: #d4d4d4;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.carousel-control-prev:hover{   
+    background: -webkit-linear-gradient(to left, #d3d3d3, #3f3f3f85); 
+    background: linear-gradient(to left, #d3d3d3, #3f3f3f85);
+
+}
+
+.carousel-control-next:hover{   
+    background: -webkit-linear-gradient(to right, #d3d3d3, #3f3f3f85); 
+    background: linear-gradient(to right, #d3d3d3, #3f3f3f85);
+}
+
+
+h1{
+    text-align: center;
+    font-family: Work Sans;
+    font-size: 50px;
+    margin:10px;
+}
+
+h2{
+    padding-top: 25px;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 37px;
+}
+
+hr{
+    background-color:black;
+    width: 50%;
+}
+
+img{
+    margin-top: 20px;
+}
+
+
