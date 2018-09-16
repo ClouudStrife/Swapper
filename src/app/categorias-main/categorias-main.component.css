@@ -12,30 +12,35 @@ hr{
 }
 
 .container{
-    padding-top: 50px;
+    padding: 50px;
 }
 
 .btn{
     width: 200px;
     height: 200px;
-    border-color: rgba(255, 255, 255, 0.589);
+    border-color: rgba(255, 255, 255, 0);
+    background-color:#a93636de;
+    border-radius: 50%;
+    opacity: 1;
     padding: 10px;
+    transition: 0.3s;
 }
 
 .btn:hover{
     background-color: #f75353de;
-    border: none;
+    border-radius: 2%;
+    opacity: 1;
 }
 
 .btn h4{
     opacity: 0;
     margin-top: -5px;
+    transition: 0.5s;
 }
 
 .btn:hover h4{
     opacity: 1;
     margin-top: 5px;
-    transition: 0.5s;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
