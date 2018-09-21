@@ -1,0 +1,12 @@
+.bgLogin{
+    background: #3e8c89; 
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+

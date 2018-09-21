@@ -4,22 +4,26 @@ import { MainComponent } from './main.component';
 import { HeaderComponent } from '../header/header.component';
 import { BodyMainComponent } from '../body-main/body-main.component';
 import { CategoriasMainComponent } from '../categorias-main/categorias-main.component';
-import { FontAwesomeModule } from '../../../node_modules/@fortawesome/angular-fontawesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
+
   declarations: [
     MainComponent,
     HeaderComponent,
     BodyMainComponent,
-    CategoriasMainComponent
+    CategoriasMainComponent,
   ],
 
   exports: [
     MainComponent,
-    FontAwesomeModule
+    HeaderComponent,
+    FontAwesomeModule,
   ]
 
 })

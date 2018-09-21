@@ -1,0 +1,50 @@
+.jumbotron{
+    padding-top: 45px;
+    border-radius: 5px;
+    background: #bcddd6;    
+}
+
+.img-fluid{
+    width: 150px;
+    height: 150px;
+}
+
+.btn-primary{
+    margin-top:15px;
+    padding: 0.375rem 2.75rem;
+}
+
+
+h1{
+    color:white;
+}
+
+label{
+    color:white;
+}
+
+.form-text {
+    color:white;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.divReg{
+    padding: 20px;
+}
+
+#btnReg{
+    margin-bottom: 17px;
+    margin-left: 15px;
+}
+
+.regs{
+    padding-top:20px;
+}
+
+#lblReg{
+    margin-right: 20px;
+}
