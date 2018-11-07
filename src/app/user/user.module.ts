@@ -5,13 +5,17 @@ import { MainModule } from '../main/main.module';
 import { UserLoginComponent } from '../user-login/user-login.component';
 import { UserRegisterComponent } from '../user-register/user-register.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms'
 
 
 @NgModule({
   imports: [
     CommonModule,
     MainModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    FormsModule
   ],
   declarations: [
     UserComponent,

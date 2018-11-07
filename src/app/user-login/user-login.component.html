@@ -1,4 +1,3 @@
-
 <div class="container">
   <img src = "assets/logo_swapper.png" class="img-fluid" alt="Responsive image">
   <h1 class="display-4">Login</h1>
@@ -6,17 +5,17 @@
         <div class="form-group">
           <label for="exampleInputEmail1">Email</label> 
           <i id="iconUser" class="fas fa-user"></i>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+          <input #email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
           <small id="emailHelp" class="form-text">Seu email não será divulgado para ninguém</small>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Senha</label>
           <i  id="iconPassword" class="fas fa-key"></i>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+          <input #senha type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
         </div>
         
         <div>
-            <button id="btnEntrar" type="submit" class="btn btn-primary btn-light">Entrar</button>
+            <button (click)="sendPost(email.value,senha.value)" id="btnEntrar" type="submit" class="btn btn-primary btn-light">Entrar</button>
             <div class="regs">
                 <label id="lblReg" for="lblRegs">Não possui conta ?</label>
                 <button routerLink="/userRegister" id="btnReg" type="submit" class="btn btn-primary btn-light">Registrar-se</button>

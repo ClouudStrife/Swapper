@@ -8,7 +8,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { UserComponent } from './user/user.component';
 import { UserModule } from './user/user.module';
-import { UserLoginComponent } from './user-login/user-login.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 
 

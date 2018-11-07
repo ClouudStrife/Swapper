@@ -1,0 +1,36 @@
+.bgRegistrar{
+    padding-top: 65px;
+    background: #4e7699; 
+    height: auto;
+    min-height: 100%;
+    width: 100%;
+}
+
+.bgRegistrar > *{
+    color: white;
+}
+
+.img-fluid{
+    width: 150px;
+    height: 150px;
+}
+
+.logo{
+    text-align: center;
+}
+
+.container{
+    padding: 20px;
+}
+
+.btnCadastrar{
+    text-align: center;
+}
+
+.btn{
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: #44b786;
+
+}
