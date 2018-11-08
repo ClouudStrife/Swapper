@@ -13,37 +13,79 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputNome">Nome</label>
-                  <input class="form-control" id="inputNome" placeholder="Nome" name="Nome" ngModel>
+                  <input class="form-control" id="inputNome" placeholder="Nome" name="Nome" ngModel required minlength="3" #nome="ngModel">
+                  <div class="invalidInput" *ngIf="!nome.valid && nome.touched">
+                    Campo inválido
+                  </div>
+                  <div class="validInput" *ngIf="nome.valid && nome.touched">
+                    Aceito
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputSobrenome">Segundo Nome</label>
-                  <input class="form-control" id="inputSobrenome" placeholder="Sobrenome" name="Sobrenome" ngModel>
+                  <input class="form-control" id="inputSobrenome" placeholder="Sobrenome" name="Sobrenome" ngModel required minlength="3" #sobrenome="ngModel">
+                  <div class="invalidInput" *ngIf="!sobrenome.valid && sobrenome.touched">
+                    Campo inválido
+                  </div>
+                  <div class="validInput" *ngIf="sobrenome.valid && sobrenome.touched">
+                    Aceito
+                  </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputEmail">Email</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="Exemplo@email.com" name="Email" ngModel>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Exemplo@email.com" name="Email" ngModel required email #email="ngModel">
+                <div class="invalidInput" *ngIf="!email.valid && email.touched">
+                  Campo inválido
+                </div>
+                <div class="validInput" *ngIf="email.valid && email.touched">
+                  Aceito
+                </div>
               </div>
               <div class="form-group">
                 <label for="inputSenha">Senha</label>
-                <input type="password" class="form-control" id="inputSenha" placeholder="Senha" name="Senha" ngModel> 
+                <input type="password" class="form-control" id="inputSenha" placeholder="Senha" name="Senha" ngModel require minlength="4" #senha="ngModel">
+                <div class="invalidInput" *ngIf="!senha.valid && senha.touched">
+                  Campo inválido
+                </div>
+                <div class="validInput" *ngIf="senha.valid && senha.touched">
+                  Aceito
+                </div> 
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputEndereco">Endereço</label>
-                  <input class="form-control" id="inputEndereco" placeholder="Endereço" name="Endereco" ngModel>
+                  <input class="form-control" id="inputEndereco" placeholder="Endereço" name="Endereco" ngModel required minlength="4" #end="ngModel">
+                  <div class="invalidInput" *ngIf="!end.valid && end.touched">
+                    Campo inválido
+                  </div>
+                  <div class="validInput" *ngIf="end.valid && end.touched">
+                    Aceito
+                  </div> 
                 </div>
                 <div class="form-group col-md-2">
                   <label for="inputNro">Número</label>
-                  <input class="form-control" id="inputNro" placeholder="Nº" name="Numero" ngModel>
+                  <input class="form-control" id="inputNro" placeholder="Nº" name="Numero" ngModel required #num="ngModel">
+                  <div class="invalidInput" *ngIf="!num.valid && num.touched">
+                    Campo inválido
+                  </div>
+                  <div class="validInput" *ngIf="num.valid && num.touched">
+                    Aceito
+                  </div> 
                 </div>
                 <div class="form-group col-md-4">
                   <label for="inputCidade">Cidade</label>
-                  <input type="text" class="form-control" id="inputCidade" placeholder="Cidade" name="Cidade" ngModel>
+                  <input class="form-control" id="inputCidade" placeholder="Cidade" name="Cidade" ngModel required #cidade="ngModel">
+                  <div class="invalidInput" *ngIf="!cidade.valid && cidade.touched">
+                    Campo inválido
+                  </div>
+                  <div class="validInput" *ngIf="cidade.valid && cidade.touched">
+                    Aceito
+                  </div> 
                 </div>
               </div>
               <div class="btnCadastrar">
-                  <button type="submit" class="btn btn-secondary">Cadastrar-se</button>
+                  <button [disabled]="!form.valid" type="submit" class="btn btn-secondary">Cadastrar-se</button>
               </div>
             </form>
       </div>

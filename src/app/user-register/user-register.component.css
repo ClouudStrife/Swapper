@@ -34,3 +34,19 @@
     background-color: #44b786;
 
 }
+
+.ng-invalid.ng-touched:not(form){
+    border: 1.5px solid red;
+}
+
+.ng-valid.ng-touched:not(form){
+    border: 1.5px solid rgb(58, 216, 98);
+}
+
+.invalidInput{
+    color:#fd8994;
+}
+
+.validInput{
+    color:#66f566;
+}
