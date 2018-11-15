@@ -6,21 +6,22 @@
     width: 100%;
 }
 
+.container-fluid{
+    width: 75%;
+    padding: 10px;
+}
+
 .bgRegistrar > *{
     color: white;
 }
 
 .img-fluid{
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
 }
 
 .logo{
     text-align: center;
-}
-
-.container{
-    padding: 20px;
 }
 
 .btnCadastrar{
@@ -31,8 +32,11 @@
     width: 200px;
     height: 50px;
     margin-top: 10px;
-    background-color: #44b786;
+    background-color: #48c38f;
+}
 
+.btn:disabled{
+    background-color: rgb(66, 65, 65);
 }
 
 .ng-invalid.ng-touched:not(form){
