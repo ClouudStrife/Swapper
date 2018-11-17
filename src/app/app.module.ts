@@ -9,19 +9,22 @@ import { MainComponent } from './main/main.component';
 import { UserComponent } from './user/user.component';
 import { UserModule } from './user/user.module';
 import { UserRegisterComponent } from './user-register/user-register.component';
+import { UserMainComponent } from './user-main/user-main.component';
+import { UserMainProductsComponent } from './user-main-products/user-main-products.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent },
   { path: 'main', component: MainComponent },
   { path: 'userLogin', component: UserComponent },
-  { path: 'userRegister', component: UserRegisterComponent}
+  { path: 'userRegister', component: UserRegisterComponent},
+  { path: 'userMain', component: UserMainComponent}
 ];
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
   ],
   
   imports: [

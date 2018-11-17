@@ -1,0 +1,33 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container text-center">
+    <h1 class="display-4">Seus produtos</h1>
+    <br>
+    <p class="lead">Aqui você encontra seus produtos cadastrados no sistema.</p>
+    <hr id="line" class="my-4">
+    <div class="row">
+      <div class="productsCards" *ngFor="let produto of produtos">
+        <div class="card">
+          <img class="card-img-top" src='assets/exemplo.jpg/' alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"> {{produto.nome}} </h5>
+            <p class="card-text"> {{produto.descricao}} </p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+              <button type="button" class="btn btn-primary">Visualizar</button>
+              <button type="button" class="btn btn-primary">
+                <i class="fas fa-times-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </div>
+
+
+  </div>
+</div>
