@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserMainProductsComponent implements OnInit {
 
+  nomeProduto = '';
+  descricao = '';
+
   constructor() { }
 
   produtos = [
@@ -17,7 +20,7 @@ export class UserMainProductsComponent implements OnInit {
 
     {
       nome: 'produto2',
-      descricao: 'seila'
+      descricao: 'Coala GOD'
     },
 
     {
@@ -30,6 +33,11 @@ export class UserMainProductsComponent implements OnInit {
       descricao: 'seila'
     }
   ]
+
+  setNome(nome:string, desc:string){
+    this.nomeProduto = nome;
+    this.descricao = desc;
+  }
 
   ngOnInit() {
   }

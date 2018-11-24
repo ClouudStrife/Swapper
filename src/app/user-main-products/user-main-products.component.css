@@ -6,3 +6,17 @@
 .productsCards{
     padding: 10px;
 }
+
+#detailImage{
+    width: 150px;
+    height: 150px;
+}
+
+#btnVerMais{
+    margin: 15px;
+    padding: 0.5rem 2.5rem;
+}
+
+#btnNovoProduto{
+    margin: 15px;
+}

@@ -12,11 +12,12 @@ import { HttpClient } from '@angular/common/http';
 
 
 export class UserRegisterComponent{
+
   constructor(private http:HttpClient) { }
 
   cadastrarUsuario(form){
 
-    this.http.post('http://localhost:3000/api/add', JSON.stringify(form.value))
+    this.http.post('http://localhost:3000/user/cadastro', { usuario : form.value})
       .subscribe(dados => console.log(dados));
     
   }

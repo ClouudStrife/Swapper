@@ -34,6 +34,19 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="inputUserName">Nome de usuário</label>
+                    <input class="form-control" id="inputUserName" placeholder="Nome de usuário" name="nomeUsuario" ngModel required minlength="3" #userName="ngModel">
+                    <div class="invalidInput" *ngIf="!userName.valid && userName.touched">
+                      Campo inválido
+                    </div>
+                    <div class="validInput" *ngIf="userName.valid && userName.touched">
+                      Aceito
+                    </div>
+                  </div>
+                </div>
   
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -48,12 +61,12 @@
                       </div>
   
                       <div class="form-group col-md-6">
-                          <label for="inputTelefone">Telefone</label>
-                          <input type="telefone" class="form-control" id="inputTelefone" placeholder="(DDD) XXXX-XXXX" name="telefone" ngModel required #telefone="ngModel">
-                          <div class="invalidInput" *ngIf="!telefone.valid && telefone.touched">
+                          <label for="inputCelular">Celular</label>
+                          <input class="form-control" id="inputCelular" placeholder="(DDD) XXXX-XXXX" name="celular" ngModel required #celular="ngModel">
+                          <div class="invalidInput" *ngIf="!celular.valid && celular.touched">
                             Campo inválido
                           </div>
-                          <div class="validInput" *ngIf="telefone.valid && telefone.touched">
+                          <div class="validInput" *ngIf="celular.valid && celular.touched">
                             Aceito
                           </div>
                       </div>
