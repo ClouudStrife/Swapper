@@ -38,7 +38,7 @@
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="inputUserName">Nome de usuário</label>
-                    <input class="form-control" id="inputUserName" placeholder="Nome de usuário" name="nomeUsuario" ngModel required minlength="3" #userName="ngModel">
+                    <input class="form-control" id="inputUserName" placeholder="Nome de usuário" name="usuario" ngModel required minlength="3" #userName="ngModel">
                     <div class="invalidInput" *ngIf="!userName.valid && userName.touched">
                       Campo inválido
                     </div>
@@ -115,11 +115,31 @@
                   </div>
                 </div>
                 <div class="btnCadastrar">
-                    <button [disabled]="!form.valid" type="submit" class="btn btn-secondary">Cadastrar-se</button>
+                    <button [disabled]="!form.valid" type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Cadastrar-se</button>
                 </div>
               </form>
         </div>
 
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 *ngIf="error" class="modal-title" id="exampleModalLabel">ERRO ENCONTRADO</h2>
+        <h2 *ngIf="!error" class="modal-title" id="exampleModalLabel">SUCESSO</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+            {{ response }}
+        </div>  
+      </div>
+    </div>
   </div>
 </div>
 

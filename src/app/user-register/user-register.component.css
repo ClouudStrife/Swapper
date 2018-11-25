@@ -54,3 +54,21 @@
 .validInput{
     color:#66f566;
 }
+
+.modal-title {
+    margin-bottom: 2px;
+    line-height: 1.5;
+    padding-left: 5rem;
+    color: #ffffff;
+}
+
+.modal-body { 
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.modal-content{
+    background-color: #4e5454;
+}
