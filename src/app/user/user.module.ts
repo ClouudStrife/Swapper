@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms'
 import { UserMainComponent } from '../user-main/user-main.component';
 import { UserMainProductsComponent } from '../user-main-products/user-main-products.component';
+import { ProductRegisterComponent } from '../product-register/product-register.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { UserMainProductsComponent } from '../user-main-products/user-main-produ
     UserLoginComponent,
     UserRegisterComponent,
     UserMainComponent,
-    UserMainProductsComponent
+    UserMainProductsComponent,
+    ProductRegisterComponent
   ],
 
   exports: [

@@ -1,6 +1,6 @@
 <div class="jumbotron">
   <div class="container-fluid text-center">
-    <h1 class="display-4">Seus produtos</h1>
+    <h1 class="display-4">Seus produtos {{usuario.nome}}</h1>
     <br>
     <p class="lead">Aqui você encontra seus produtos cadastrados no sistema.</p>
     <hr id="line" class="my-4">
@@ -15,7 +15,7 @@
               <button type="button" class="btn btn-primary">
                 <i class="fas fa-pencil-alt"></i>
               </button>
-              <button (click)="setNome(name.textContent, descricao.textContent)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Detalhes</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Detalhes</button>
               <button type="button" class="btn btn-primary">
                 <i class="fas fa-times-circle"></i>
               </button>
@@ -29,7 +29,7 @@
 
     <div class="row justify-content-center">
             <button id="btnVerMais" type="button" class="btn btn-primary btn-lg">Ver mais</button>   
-            <button id="btnNovoProduto" type="button" class="btn btn-primary btn-lg">Novo Produto</button>  
+            <button routerLink="/productRegister" id="btnNovoProduto" type="button" class="btn btn-primary btn-lg">Novo Produto</button>  
     </div>    
   </div>
 </div>
@@ -39,7 +39,7 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title" id="exampleModalLabel">{{ nomeProduto }}</h2>
+        <h2 class="modal-title" id="exampleModalLabel">??</h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -52,13 +52,13 @@
             </div>
              <div class="col-md-8">
                <div class="row">
-                  <h5>Descrição: </h5> {{ descricao }} 
+                  <h5>Descrição: </h5> ??
                </div>
                <div class="row">
-                  <h5>Descrição: </h5> {{ descricao }} 
+                  <h5>Descrição: </h5> ??
                </div>
                <div class="row">
-                  <h5>Descrição: </h5> {{ descricao }} 
+                  <h5>Descrição: </h5> ??
                </div>
              </div> 
           </div>

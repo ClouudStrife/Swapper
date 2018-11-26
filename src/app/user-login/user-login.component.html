@@ -1,21 +1,20 @@
 <div class="container">
   <img src = "assets/logo_swapper.png" class="img-fluid" alt="Responsive image">
   <h1 class="display-4">Login</h1>
-  <form>
+  <form #f="ngForm" (ngSubmit)="loginVerify(f)">
         <div class="form-group">
-          <label for="exampleInputEmail1">Email</label> 
+          <label for="exampleInputUsername">Username</label> 
           <i id="iconUser" class="fas fa-user"></i>
-          <input #email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-          <small id="emailHelp" class="form-text">Seu email não será divulgado para ninguém</small>
+          <input #username class="form-control" id="exampleInputUsername" placeholder="Username" ngModel name="username">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Senha</label>
           <i  id="iconPassword" class="fas fa-key"></i>
-          <input #senha type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+          <input #senha type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" ngModel name="password">
         </div>
         
         <div>
-            <button (click)="sendPost(email.value,senha.value)" id="btnEntrar" type="submit" class="btn btn-primary btn-light">Entrar</button>
+            <button id="btnEntrar" type="submit" class="btn btn-primary btn-light">Entrar</button>
             <div class="regs">
                 <label id="lblReg" for="lblRegs">Não possui conta ?</label>
                 <button routerLink="/userRegister" id="btnReg" type="submit" class="btn btn-primary btn-light">Registrar-se</button>

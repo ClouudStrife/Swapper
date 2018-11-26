@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from './produto';
+import { HttpClient } from '@angular/common/http';
+import { User } from '../user';
 
 @Component({
   selector: 'app-user-main-products',
@@ -7,39 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserMainProductsComponent implements OnInit {
 
-  nomeProduto = '';
-  descricao = '';
-
-  constructor() { }
-
-  produtos = [
-    {
-      nome: 'produto1',
-      descricao: 'seila'
-    },
-
-    {
-      nome: 'produto2',
-      descricao: 'Coala GOD'
-    },
-
-    {
-      nome: 'produto3',
-      descricao: 'GUGA'
-    },
-
-    {
-      nome: 'produto4',
-      descricao: 'seila'
-    }
-  ]
-
-  setNome(nome:string, desc:string){
-    this.nomeProduto = nome;
-    this.descricao = desc;
-  }
+  URL = "http://localhost:3000"
+  produtos:Produto[] = [];
+  usuarioLogado:User = JSON.parse(localStorage.getItem('user'));
+  
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.http.get<Produto[]>(this.URL+"/user/"+ this.usuarioLogado.id +"/produtos")
+    .subscribe(dadosProdutos => {
+      this.produtos = dadosProdutos
+    });
   }
 
 }

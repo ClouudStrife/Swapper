@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="container-fluid text-center">
+      <img class="img-fluid" src = "assets/logo_swapper.png">
+      <h1 class="display-4">Cadastrar produto</h1>
+      <form #form="ngForm" (ngSubmit)="cadastrarProduto(form)">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nome produto</label>
+            <input class="form-control" placeholder="Nome do produto" ngModel name="nome">
+          </div>
+          <div class="form-group">
+            <label>Descrição</label>
+            <input class="form-control" placeholder="Descrição do produto" ngModel name="descricao">
+          </div>
+          <div class="form-group">
+              <label>Quantidade</label>
+              <input class="form-control" placeholder="Ex: 5" ngModel name="quantidade">
+          </div>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>  
+  </div>
+</div>

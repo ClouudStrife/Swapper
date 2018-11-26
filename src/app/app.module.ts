@@ -10,7 +10,7 @@ import { UserComponent } from './user/user.component';
 import { UserModule } from './user/user.module';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { UserMainComponent } from './user-main/user-main.component';
-import { UserMainProductsComponent } from './user-main-products/user-main-products.component';
+import { ProductRegisterComponent } from './product-register/product-register.component';
 
 
 const appRoutes: Routes = [
@@ -18,13 +18,14 @@ const appRoutes: Routes = [
   { path: 'main', component: MainComponent },
   { path: 'userLogin', component: UserComponent },
   { path: 'userRegister', component: UserRegisterComponent},
-  { path: 'userMain', component: UserMainComponent}
+  { path: 'userMain', component: UserMainComponent},
+  { path: 'productRegister', component: ProductRegisterComponent}
 ];
 
 
 @NgModule({
   declarations: [
-    AppComponent,    
+    AppComponent  
   ],
   
   imports: [
