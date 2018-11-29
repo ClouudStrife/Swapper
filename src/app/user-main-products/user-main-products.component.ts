@@ -14,7 +14,7 @@ export class UserMainProductsComponent implements OnInit {
   produtos:Produto[] = [];
   usuarioLogado:User = JSON.parse(localStorage.getItem('user'));
   
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.http.get<Produto[]>(this.URL+"/user/"+ this.usuarioLogado.id +"/produtos")
@@ -22,5 +22,4 @@ export class UserMainProductsComponent implements OnInit {
       this.produtos = dadosProdutos
     });
   }
-
 }

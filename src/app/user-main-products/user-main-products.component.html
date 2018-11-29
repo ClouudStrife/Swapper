@@ -1,21 +1,27 @@
 <div class="jumbotron">
   <div class="container-fluid text-center">
-    <h1 class="display-4">Seus produtos {{usuario.nome}}</h1>
+    <h1 class="display-4">Seus produtos {{ usuarioLogado.nome }}</h1>
     <br>
     <p class="lead">Aqui você encontra seus produtos cadastrados no sistema.</p>
     <hr id="line" class="my-4">
     <div class="row justify-content-center">
+      <div *ngIf="produtos.length == 0">
+        NENHUM PRODUTO CADASTRADO
+      </div>
       <div class="productsCards" *ngFor="let produto of produtos">
         <div class="card">
           <img class="card-img-top" src='assets/exemplo.jpg/' alt="Card image cap">
           <div class="card-body">
-            <h5 #name class="card-title"> {{produto.nome}} </h5>
-            <p #descricao class="card-text"> {{produto.descricao}} </p>
+            <div class="row justify-content-center">
+                <label #idValue id="id"> {{produto.id}} </label>
+                <h5 #name class="card-title"> {{produto.nome}} </h5>
+            </div>
+            <p #descricao class="card-text">Categoria: {{produto.categoria}} </p>
             <div class="btn-group" role="group" aria-label="Basic example">
               <button type="button" class="btn btn-primary">
                 <i class="fas fa-pencil-alt"></i>
               </button>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Detalhes</button>
+              <button (click)="getProductInfo(idValue.textContent)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Detalhes</button>
               <button type="button" class="btn btn-primary">
                 <i class="fas fa-times-circle"></i>
               </button>
@@ -52,13 +58,16 @@
             </div>
              <div class="col-md-8">
                <div class="row">
-                  <h5>Descrição: </h5> ??
+                  <h5>Nome produto: </h5>
                </div>
                <div class="row">
-                  <h5>Descrição: </h5> ??
+                  <h5>Descrição: </h5> 
                </div>
                <div class="row">
-                  <h5>Descrição: </h5> ??
+                  <h5>Quantidade: </h5> 
+               </div>
+               <div class="row">
+                  <h5>Categoria: </h5> 
                </div>
              </div> 
           </div>

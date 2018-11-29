@@ -20,3 +20,7 @@
 #btnNovoProduto{
     margin: 15px;
 }
+
+#id{
+    display:none;
+}

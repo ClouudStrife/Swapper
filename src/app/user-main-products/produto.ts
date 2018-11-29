@@ -3,5 +3,6 @@ export class Produto{
     nome = ''
     quantidade = ''
     descricao = ''
+    categoria=''
     status = ''
 }
