@@ -9,7 +9,7 @@
           <img src = "assets/logo_swapper.png" class="img-fluid" alt="Responsive image">
           <h2>Insira seus dados</h2>
       </div>
-  
+
       <div class="container">
             <form #form="ngForm" (ngSubmit)="cadastrarUsuario(form)">
                 <div class="form-row">
@@ -47,7 +47,7 @@
                     </div>
                   </div>
                 </div>
-  
+
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail">Email</label>
@@ -59,7 +59,7 @@
                           Aceito
                         </div>
                       </div>
-  
+
                       <div class="form-group col-md-6">
                           <label for="inputCelular">Celular</label>
                           <input class="form-control" id="inputCelular" placeholder="(DDD) XXXX-XXXX" name="celular" ngModel required #celular="ngModel">
@@ -71,7 +71,7 @@
                           </div>
                       </div>
                 </div>
-          
+
                 <div class="form-group">
                   <label for="inputSenha">Senha</label>
                   <input type="password" class="form-control" id="inputSenha" placeholder="Senha" name="senha" ngModel require minlength="4" #senha="ngModel">
@@ -80,7 +80,7 @@
                   </div>
                   <div class="validInput" *ngIf="senha.valid && senha.touched">
                     Aceito
-                  </div> 
+                  </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
@@ -91,7 +91,7 @@
                     </div>
                     <div class="validInput" *ngIf="end.valid && end.touched">
                       Aceito
-                    </div> 
+                    </div>
                   </div>
                   <div class="form-group col-md-2">
                     <label for="inputNro">Número</label>
@@ -101,7 +101,7 @@
                     </div>
                     <div class="validInput" *ngIf="num.valid && num.touched">
                       Aceito
-                    </div> 
+                    </div>
                   </div>
                   <div class="form-group col-md-4">
                     <label for="inputCidade">Cidade</label>
@@ -111,7 +111,7 @@
                     </div>
                     <div class="validInput" *ngIf="cidade.valid && cidade.touched">
                       Aceito
-                    </div> 
+                    </div>
                   </div>
                 </div>
                 <div class="btnCadastrar">
@@ -130,16 +130,15 @@
       <div class="modal-header">
         <h2 *ngIf="error" class="modal-title" id="exampleModalLabel">ERRO ENCONTRADO</h2>
         <h2 *ngIf="!error" class="modal-title" id="exampleModalLabel">SUCESSO</h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <button (click)="goToUser()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <a routerLink="/userMain"><span aria-hidden="true">&times;</span></a>
         </button>
       </div>
       <div class="modal-body">
         <div class="container-fluid">
             {{ response }}
-        </div>  
+        </div>
       </div>
     </div>
   </div>
 </div>
-

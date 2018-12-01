@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,15 +14,14 @@ export class UserRegisterComponent{
   response:any;
   error:boolean;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private router: Router){}
 
   cadastrarUsuario(form){
-
     this.http.post('http://localhost:3000/user/cadastro', { usuario : form.value }, { observe: 'response' })
       .subscribe((dados:any) => {
         if (dados.status == 201){
           this.error = false;
-          this.response = "Cadastro do usuário " + dados.body.nome + " realizado com sucesso !";
+          this.response = "Seja bem vindo " + dados.body.nome + "!";
           form.reset();
         }
         else{
@@ -29,5 +29,10 @@ export class UserRegisterComponent{
           this.response = dados.body.sqlMessage;
         }
       });
+  }
+
+  goToUser(){
+    this.router.navigate (['/userMain']);
+    console.log("Ola");
   }
 }
