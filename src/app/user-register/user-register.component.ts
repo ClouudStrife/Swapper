@@ -32,7 +32,6 @@ export class UserRegisterComponent{
   }
 
   goToUser(){
-    this.router.navigate (['/userMain']);
-    console.log("Ola");
+    this.router.navigate (['/userLogin']);
   }
 }
