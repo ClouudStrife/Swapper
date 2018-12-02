@@ -10,6 +10,12 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if(localStorage.getItem('userToken'){
+      this.conta = "Minha conta";
+    }
+    else{
+      this.conta = "Entrar"
+    }
   }
 
 }
