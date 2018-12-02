@@ -12,9 +12,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     if(localStorage.getItem('userToken'){
       this.conta = "Minha conta";
+      this.rota = "userMain"
     }
     else{
       this.conta = "Entrar"
+      this.rota = "userLogin"
     }
   }
 
