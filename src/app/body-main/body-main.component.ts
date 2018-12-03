@@ -9,7 +9,14 @@ export class BodyMainComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  rota = "/userLogin"
 
+  ngOnInit() {
+    if(localStorage.getItem('userToken')){
+      this.rota = "/userMain"
+    }
+    else{
+      this.rota = "/userLogin"
+    }
+  }
 }
