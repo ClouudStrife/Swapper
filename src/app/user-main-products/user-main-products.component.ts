@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from './produto';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { User } from '../user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-main-products',
@@ -16,12 +17,12 @@ export class UserMainProductsComponent implements OnInit {
 
   usuarioLogado:User = JSON.parse(localStorage.getItem('user'));
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
     this.http.get<Produto[]>(this.URL+"/user/"+ this.usuarioLogado.id + "/produtos")
     .subscribe(dadosProdutos => {
-      this.produtos = dadosProdutos
+      this.produtos = dadosProdutos;
     });
   }
 
@@ -30,13 +31,17 @@ export class UserMainProductsComponent implements OnInit {
     this.http.get<Produto[]>(this.URL+"/user/"+ this.usuarioLogado.id + "/produtos/" + idProduto)
     .subscribe(dadosProduto => {
       this.produto = dadosProduto
-      console.log("Produto:", this.produto[0].nome);
     });
   }
 
   deleteProduct(idProduto){
     console.log("ID:", idProduto);
     this.http.delete<Produto[]>(this.URL+"/user/"+ this.usuarioLogado.id + "/produtos/" + idProduto + "/remove")
-      .subscribe();
+      .subscribe((resposta : any) => {
+        //O refresh era pra ser feito aqui
+      },
+      (err:HttpErrorResponse) => { //VERIFICA SE RESPOSTA DO SERVIDOR RETORNOU ALGUM ERRO, STATUS(500), 400 ETC..
+          location.reload(); //It'll get better... eventually...
+      });
   }
 }
