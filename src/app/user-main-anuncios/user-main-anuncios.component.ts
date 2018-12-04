@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Anuncios } from '../anuncios';
 import { Ofertas } from '../ofertas';
+import { User } from '../user';
 
 
 @Component({
@@ -11,15 +12,17 @@ import { Ofertas } from '../ofertas';
 })
 export class UserMainAnunciosComponent implements OnInit {
  
+  usuarioLogado:User = JSON.parse(localStorage.getItem('user'));
   anuncios:Anuncios[] = [];
   ofertas:Ofertas[] = [];
 
   constructor(private http:HttpClient) { }
 
   ngOnInit() {
-    this.http.get<Anuncios[]>("http://localhost:3000/user/131/anuncios")
+    this.http.get<Anuncios[]>("http://localhost:3000/user/" + this.usuarioLogado.id +"/anuncios")
       .subscribe( res => {
         this.anuncios = res;
+        console.log(res);
       })
   }
 
@@ -27,7 +30,6 @@ export class UserMainAnunciosComponent implements OnInit {
     this.http.get<Ofertas[]>("http://localhost:3000/anuncio/"+ id +"/propostas/recebidas")
     .subscribe( ofertasApi => {
       this.ofertas = ofertasApi;
-      console.log(ofertasApi);
     })
   }
 }
