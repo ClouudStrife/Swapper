@@ -7,6 +7,10 @@
     padding: 10px;
 }
 
+#btn-border-not-blue{
+  box-shadow: none;
+}
+
 #detailImage{
     width: 150px;
     height: 150px;
