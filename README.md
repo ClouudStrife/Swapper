@@ -1,6 +1,8 @@
-# SwapperProject
+# Swapper
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 6.1.4.
+
+O back-end deste projeto pode ser encontrado [neste](https://github.com/rsaless/Swapper-API) repositório.
 
 ## Development server
 
