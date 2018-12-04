@@ -12,6 +12,8 @@ import { UserRegisterComponent } from './user-register/user-register.component';
 import { UserMainComponent } from './user-main/user-main.component';
 import { ProductRegisterComponent } from './product-register/product-register.component';
 import { AnunciosComponent } from './anuncios/anuncios.component';
+import { AnuncioRegistroComponent } from './anuncio-registro/anuncio-registro.component';
+
 
 
 const appRoutes: Routes = [
@@ -21,14 +23,15 @@ const appRoutes: Routes = [
   { path: 'userRegister', component: UserRegisterComponent},
   { path: 'userMain', component: UserMainComponent},
   { path: 'productRegister', component: ProductRegisterComponent},
-  { path: 'anuncios/:categoria', component: AnunciosComponent}
+  { path: 'anuncios/:categoria', component: AnunciosComponent},
+  { path: 'anuncio', component: AnuncioRegistroComponent}
 ];
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AnunciosComponent  
+    AnunciosComponent
   ],
   
   imports: [

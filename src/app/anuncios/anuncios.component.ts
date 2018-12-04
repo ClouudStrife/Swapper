@@ -21,8 +21,5 @@ export class AnunciosComponent implements OnInit {
        (parametro:any) => { 
          this.categoria = parametro['categoria'];
        });
-
-    this.http.get<Produto[]>(this.URL + '/anuncios/produtos/' + this.categoria)
-       .subscribe( res => console.log(res));
   }
 }

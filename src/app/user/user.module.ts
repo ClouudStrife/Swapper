@@ -10,6 +10,10 @@ import {FormsModule} from '@angular/forms'
 import { UserMainComponent } from '../user-main/user-main.component';
 import { UserMainProductsComponent } from '../user-main-products/user-main-products.component';
 import { ProductRegisterComponent } from '../product-register/product-register.component';
+import { UserMainAnunciosComponent } from '../user-main-anuncios/user-main-anuncios.component';
+import { ListaProdutosComponent } from '../lista-produtos/lista-produtos.component';
+import { AnuncioRegistroComponent } from '../anuncio-registro/anuncio-registro.component';
+
 
 
 @NgModule({
@@ -26,7 +30,10 @@ import { ProductRegisterComponent } from '../product-register/product-register.c
     UserRegisterComponent,
     UserMainComponent,
     UserMainProductsComponent,
-    ProductRegisterComponent
+    ProductRegisterComponent,
+    UserMainAnunciosComponent,
+    ListaProdutosComponent,
+    AnuncioRegistroComponent
   ],
 
   exports: [

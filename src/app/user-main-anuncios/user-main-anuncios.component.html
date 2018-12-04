@@ -1,0 +1,56 @@
+<div class="container-fluid text-center">
+  <div class="title">
+      <h1 class="display-4">Seus anuncios</h1>
+  </div>
+
+  <div class="container" >
+      <div class="accordion" id="accordionExample">
+          <div class="card" *ngFor="let anuncio of anuncios; let i = index">
+            <button (click)="getOfertas(lbl.innerHTML)" class="btn btn-info" type="button" data-toggle="collapse" attr.data-target="#collapse{{i}}"  aria-controls="collapseOne">
+                <i class="far fa-caret-square-right"></i>  {{ anuncio.nome }} 
+                <label #lbl> {{ anuncio.id }} </label>
+                <i class="far fa-calendar-alt"></i> Data: 03/12/2018
+            </button>
+
+            <div id="collapse{{i}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <h1> Ofertas recebidas </h1>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"  *ngFor="let oferta of ofertas">
+                        <button id="btnOfertas" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+                            {{ oferta.nome_produto }}
+                        </button>
+                      </li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+  <button routerLink="/anuncio" type="button" class="btn btn-secondary btn-lg">Novo anuncio</button>
+  </div>
+</div>
+
+  
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">DETALHES DA OFERTA</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Recusar</button>
+          <button type="button" class="btn btn-success">Aceitar</button>
+        </div>
+      </div>
+    </div>
+  </div>
