@@ -4,4 +4,7 @@ export class User{
     usuario = ''
     nome = ''
     sobrenome = ''
+    celular = ''
+    endereco = ''
+    cidade = ''
 }

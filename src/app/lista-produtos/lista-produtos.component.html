@@ -1,0 +1,29 @@
+<div class="container-fluid text-center">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let produto of produtos">
+            <div class="card">
+                <div class="card-header">
+                    <label #idValue id="id"> {{produto.id}} </label>
+                    <h5 #name class="card-title"> {{produto.nome}} </h5>
+                </div>
+                <div class="card-body">
+                  <div class="row row justify-content-center">
+                        <P>Descrição: {{ produto.descricao }}</P>
+                  </div>
+
+                  <div class="row row justify-content-center">
+                        <P>Quantidade: {{ produto.quantidade }}</P>
+                  </div>
+
+                  <div class="row row justify-content-center">
+                        <P>Categoria: {{ produto.categoria }}</P>
+                  </div>
+
+                  <button (click)="criarAnuncio(idValue.innerHTML)" class="btn btn-primary">Selecionar</button>
+
+                </div>
+              </div>
+        </li>
+    </ul>
+</div>
+
