@@ -1,13 +1,7 @@
 export class Propostas{
-    //DADOS DO PRODUTO OFERTADO
+    data_criacao = ''
+    id_produto = ''
+    anuncio_id = ''
     nome_produto = ''
-    descricao = ''
-    quantidade = ''
-
-    //DADOS OFERTANTE
-    nome_ofertante = ''
-    sobrenome_ofertante = ''
-    email  = ''
-    celular = ''
-    cidade = ''
+    dono_ofertado = ''
 }
