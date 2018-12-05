@@ -1,9 +1,13 @@
 <app-header></app-header>
 
-<div class="container">
-  <div class="container-fluid text-center">
+<div class="container text-center">
+  <div class="title">
       <img class="img-fluid" src = "assets/logo_swapper.png">
       <h1 class="display-4">Cadastrar produto</h1>
+   </div> 
+   <br>
+
+  <div class="container-fluid">
       <form #form="ngForm" (ngSubmit)="cadastrarProduto(form)">
           <div class="form-group">
             <label for="exampleInputEmail1">Nome produto</label>
@@ -36,7 +40,7 @@
                 </div>
               </div>
           </div>
-          <button type="submit" class="btn btn-primary">Cadastrar</button>
+          <button type="submit" class="btn btn-light">Cadastrar</button>
         </form>  
   </div>
 </div>
