@@ -3,10 +3,6 @@
     margin: 10px;
 }
 
-.productsCards{
-    padding: 10px;
-}
-
 #btn-border-not-blue{
   box-shadow: none;
 }
@@ -27,4 +23,18 @@
 
 #id{
     display:none;
+}
+
+.modal-content{
+    background-color: #066a79;
+    color: white;
+    font: arial;
+}
+
+#close{
+    color:white;
+}
+
+.jumbotron{
+    padding: 3.5rem 2rem;
 }

@@ -8,4 +8,34 @@
 
 #btnOfertas{
     width: 100%;
+    padding: .5rem;
+}
+
+#btnOfertas:hover{
+    background-color: #096679;
+    cursor: pointer;
+    color: white;
+    transition: .3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#anuncioID{
+    display:none;
+}
+
+.anunciosInfo{
+    padding: 1rem 1rem;
+    background-color: #909da0;
+    color:  white;
+    margin-bottom: 1px;
+}
+
+.anunciosInfo:hover{
+    cursor: pointer;
+    background-color: #2d2d2d;
+    transition: .4s;
+}
+
+.container{
+    max-width: 900px;
 }

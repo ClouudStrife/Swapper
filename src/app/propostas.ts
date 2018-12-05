@@ -1,4 +1,4 @@
-export class Ofertas{
+export class Propostas{
     //DADOS DO PRODUTO OFERTADO
     nome_produto = ''
     descricao = ''

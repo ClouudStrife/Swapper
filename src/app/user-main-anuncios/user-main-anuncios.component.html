@@ -2,28 +2,42 @@
   <div class="title">
       <h1 class="display-4">Seus anuncios</h1>
   </div>
+  <br>
   <div class="container" >
     <div class="accordion" id="accordionExample">
-        <div class="card" *ngFor="let anuncio of anuncios; let i = index">
-          <button (click)="getOfertas(lbl.innerHTML)" class="btn btn-info" type="button" data-toggle="collapse" attr.data-target="#collapse{{i}}"  aria-controls="collapseOne">
-              <i class="far fa-caret-square-right"></i>  {{ anuncio.nome }} 
-              <label #lbl> {{ anuncio.id }} </label>
-              <i class="far fa-calendar-alt"></i> Data: 03/12/2018
-          </button>
+        <div *ngFor="let anuncio of anuncios; let i = index">
+          <a (click)="getOfertas(id.innerHTML)" data-toggle="collapse" attr.data-target="#collapse{{i}}">
+              <label #id id='anuncioID'> {{ anuncio.id }} </label>
+              <div class="anunciosInfo">
+                  <div class="row justify-content-center">
+                      <div class="col-4">
+                          <i class="far fa-caret-square-right"></i>  {{ anuncio.nome }} 
+                      </div>
+                      <div class="col-4">
+                          <i class="far fa-calendar-alt"></i> Data: 03/12/2018
+                      </div>
+                   </div>
+              </div>
+          </a>
 
           <div id="collapse{{i}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <h1> Ofertas recebidas </h1>
+            <h1> Ofertas recebidas </h1>
 
-              <ul class="list-group list-group-flush">
-                  <li class="list-group-item"  *ngFor="let oferta of ofertas">
-                      <button id="btnOfertas" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
-                          {{ oferta.nome_produto }}
-                      </button>
-                    </li>
-                </ul>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"  *ngFor="let proposta of propostas">
+                <div class="propostasRecebidas">
+                    <div class="row">
+                        <a id="btnOfertas" class="" data-toggle="modal" data-target="#exampleModalCenter">
+                            {{ proposta.nome_produto }}
+                         </a>
+                      </div>
+                  </div>
+                </li>
+              </ul>
           </div>
         </div>
       </div>
+      <br>
 <button routerLink="/anuncio" type="button" class="btn btn-secondary btn-lg">Novo anuncio</button>
 </div>
 </div>

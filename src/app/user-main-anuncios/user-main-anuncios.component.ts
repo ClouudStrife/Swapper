@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Anuncios } from '../anuncios';
-import { Ofertas } from '../ofertas';
+import { Propostas } from '../propostas';
 import { User } from '../user';
 
 
@@ -14,7 +14,7 @@ export class UserMainAnunciosComponent implements OnInit {
  
   usuarioLogado:User = JSON.parse(localStorage.getItem('user'));
   anuncios:Anuncios[] = [];
-  ofertas:Ofertas[] = [];
+  propostas:Propostas[] = [];
 
   constructor(private http:HttpClient) { }
 
@@ -27,9 +27,9 @@ export class UserMainAnunciosComponent implements OnInit {
   }
 
   getOfertas(id){
-    this.http.get<Ofertas[]>("http://localhost:3000/anuncio/"+ id +"/propostas/recebidas")
+    this.http.get<Propostas[]>("http://localhost:3000/anuncio/"+ id +"/propostas/recebidas")
     .subscribe( ofertasApi => {
-      this.ofertas = ofertasApi;
+      this.propostas = ofertasApi;
     })
   }
 }
