@@ -18,3 +18,19 @@
     height: 100px;
     width: 100px;
 }
+
+.form-control:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #00ffa5;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #24987c;
+}
+
+.custom-select:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #00ffa5;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #24987c;
+}
