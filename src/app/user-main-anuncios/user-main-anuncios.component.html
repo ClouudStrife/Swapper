@@ -53,7 +53,7 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
+    <div class="modal-content" *ngFor="let produto of produtos">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalCenterTitle">DETALHES DA OFERTA</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -61,10 +61,34 @@
         </button>
       </div>
       <div class="modal-body">
-          <h5>Seu produto</h5>
+          <h5>Produto Ofertado</h5>
           <hr>
-          <h5>Produto ofertado</h5>
-        </div>
+
+          <div class="col-md-8">
+              <div class="row">
+                 <h5><b>Nome produto:</b> {{ produto.nome }} </h5>
+              </div>
+              <div class="row">
+                 <h5><b>Descrição:</b>  {{ produto.descricao }} </h5> 
+              </div>
+              <div class="row">
+                 <h5><b>Quantidade:</b> {{ produto.quantidade }} </h5>
+              </div>
+            </div>
+            <hr>
+            <h5>Ofertante</h5>
+            <hr>
+            <div class="col-md-8">
+              <div class="row">
+                 <h5><b>Nome ofertante:</b> </h5>
+                 <h5><b>Sobrenome:</b>  </h5>
+              </div>
+              <div class="row">
+                 <h5><b>Email:</b>  </h5> 
+              </div>  
+            </div>
+      </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Recusar</button>
         <button type="button" class="btn btn-success">Aceitar</button>

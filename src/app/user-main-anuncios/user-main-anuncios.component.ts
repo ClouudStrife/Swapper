@@ -16,7 +16,7 @@ export class UserMainAnunciosComponent implements OnInit {
   usuarioLogado:User = JSON.parse(localStorage.getItem('user'));
   anuncios:Anuncios[] = [];
   propostas:Propostas[] = [];
-  produto: Produto[] = [];
+  produtos: Produto[] = [];
   ofertante: User[] = [];
 
   constructor(private http:HttpClient) { }
@@ -25,7 +25,6 @@ export class UserMainAnunciosComponent implements OnInit {
     this.http.get<Anuncios[]>("http://localhost:3000/user/" + this.usuarioLogado.id +"/anuncios")
       .subscribe( res => {
         this.anuncios = res;
-        console.log(res);
       })
   }
 
@@ -37,10 +36,15 @@ export class UserMainAnunciosComponent implements OnInit {
   }
 
   getInfo(idProduto, idOfertante, idAnuncio){
-    this.http.get<Produto[]>("http://localhost:3000/produto/"+ idProduto)
-    .subscribe( res  => this.produto = res)
 
-  
-    console.log(idOfertante)
+    this.http.get<User[]>("http://localhost:3000/userByID/"+ idOfertante)
+    .subscribe( dadosAPI  => {
+      this.ofertante = dadosAPI
+    })
+
+    this.http.get<Produto[]>("http://localhost:3000/produto/"+ idProduto)
+    .subscribe( dadosAPI  => {
+      this.produtos = dadosAPI
+    })
   }
 }
