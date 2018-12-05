@@ -1,9 +1,12 @@
 <div class="container-fluid text-center">
   <div class="title">
-      <h1 class="display-4">Seus anuncios</h1>
+      <h1 class="display-4">Seus anúncios</h1>
   </div>
   <br>
   <div class="container" >
+    <button routerLink="/anuncio" type="button" class="btn btn-secondary btn-lg">Novo anuncio</button>
+    <br>
+    <br>
     <div class="accordion" id="accordionExample">
         <div *ngFor="let anuncio of anuncios; let i = index">
           <a (click)="getOfertas(id.innerHTML)" data-toggle="collapse" attr.data-target="#collapse{{i}}">
@@ -40,8 +43,6 @@
           </div>
         </div>
       </div>
-      <br>
-<button routerLink="/anuncio" type="button" class="btn btn-secondary btn-lg">Novo anuncio</button>
 </div>
 </div>
 
