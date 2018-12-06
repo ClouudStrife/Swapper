@@ -2,9 +2,8 @@
   <div class="title">
       <h1 class="display-4">Seus anúncios</h1>
   </div>
-  <br>
   <div class="container" >
-    <button routerLink="/anuncio" type="button" class="btn btn-secondary btn-lg">Novo anuncio</button>
+    <button routerLink="/anuncio" type="button" class="btn btn-dark btn-lg">Novo anúncio</button>
     <br>
     <br>
     <div class="accordion" id="accordionExample">
@@ -23,8 +22,17 @@
               </div>
           </a>
 
+          
+
           <div id="collapse{{i}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
             <h1> Ofertas recebidas </h1>
+            
+            <div *ngIf=" propostas.length == 0">
+                <br>
+                Nenhuma oferta recebida 
+                <br>
+            </div>
+            <br>
 
             <ul class="list-group list-group-flush">
               <li class="list-group-item"  *ngFor="let proposta of propostas">

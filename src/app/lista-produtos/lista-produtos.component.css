@@ -1,8 +1,44 @@
 .container-fluid{
     width:50%;
     margin-top: 20px;
+
 }
 
 #id{
     display: none;
+}
+
+.card {
+    border-left: none;
+    border-right: none;
+    border-top: none;  
+}
+
+.card:hover.img-fluid{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+.card-header{
+    background-color: #10afa6;
+    color: white;
+    padding: 0.75rem 1rem 0rem 1rem;
+    border-radius: 0;
+}
+
+
+.card-body{
+    padding: 1rem;
+    background-color: #e0e2e2;
+}
+
+.img-fluid{
+    width: 150px;
+    height: 150px;
+}
+
+.bottomCardBody{
+    padding-top: .7rem;
 }

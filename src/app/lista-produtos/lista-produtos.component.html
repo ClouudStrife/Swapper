@@ -1,29 +1,43 @@
 <div class="container-fluid text-center">
-    <ul class="list-group">
-        <li class="list-group-item" *ngFor="let produto of produtos">
-            <div class="card">
-                <div class="card-header">
-                    <label #idValue id="id"> {{produto.id}} </label>
-                    <h5 #name class="card-title"> {{produto.nome}} </h5>
+    <div class="content" *ngFor="let produto of produtos">
+         <div class="card">
+            <div class="card-header">
+                <label #idValue id="id"> {{produto.id}} </label>
+                <h5 #name class="card-title"> {{produto.nome}} </h5>
+            </div>
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-4">
+                        <img class="img-fluid" src='assets/exemplo.jpg/' alt="Card image cap">
+                    </div>
+                    <div class="col-8">
+                            <div class="row justify-content-start">
+                                 <p class="lead"> {{ produto.descricao }} </p>       
+                             </div>
+
+                            <div class="row justify-content-start">
+                                <p class="lead"> {{ produto.categoria }} </p>       
+                            </div>
+
+                            <div class="row justify-content-start">
+                                    <h5>
+                                        Quantidade:
+                                        <small class="text-muted"> {{ produto.quantidade }} </small>
+                                    </h5>       
+                            </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                  <div class="row row justify-content-center">
-                        <P>Descrição: {{ produto.descricao }}</P>
-                  </div>
 
-                  <div class="row row justify-content-center">
-                        <P>Quantidade: {{ produto.quantidade }}</P>
-                  </div>
-
-                  <div class="row row justify-content-center">
-                        <P>Categoria: {{ produto.categoria }}</P>
-                  </div>
-
-                  <button (click)="criarAnuncio(idValue.innerHTML)" class="btn btn-primary">Selecionar</button>
-
+                <div class="bottomCardBody">
+                    <button (click)="criarAnuncio(idValue.innerHTML)" class="btn btn-dark">Selecionar</button>
+                    <hr>
                 </div>
-              </div>
-        </li>
-    </ul>
+
+                
+
+            </div>
+         </div>
+    </div>
 </div>
 
