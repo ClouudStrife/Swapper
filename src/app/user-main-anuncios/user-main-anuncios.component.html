@@ -13,7 +13,7 @@
               <div class="anunciosInfo">
                   <div class="row justify-content-center">
                       <div class="col-4">
-                          <i class="far fa-caret-square-right"></i>  {{ anuncio.nome }} 
+                          <h5>Seu anúncio</h5>  {{ anuncio.nome }} 
                       </div>
                       <div class="col-4">
                           <i class="far fa-calendar-alt"></i> Data: 03/12/2018
@@ -42,7 +42,10 @@
                       <label #idOfertante > {{ proposta.dono_ofertado}} </label>
                       <label #idAnuncio > {{ proposta.anuncio_id }} </label>
                         <a (click)="getInfo(idProduto.innerHTML, idOfertante.innerHTML, idAnuncio.innerHTML)" id="btnOfertas" class="" data-toggle="modal" data-target="#exampleModalCenter">
-                            {{ proposta.nome_produto }}
+                            <h5>
+                                Produto ofertado:
+                                <small class="text"> {{ proposta.nome_produto }} </small>
+                            </h5>
                          </a>
                       </div>
                   </div>
@@ -70,30 +73,54 @@
         </button>
       </div>
       <div class="modal-body">
-          <h5>Produto Ofertado</h5>
+          <h4>Produto Ofertado</h4>
           <hr>
-
-          <div class="col-md-8">
-              <div class="row">
-                 <h5><b>Nome produto:</b> {{ produto.nome }} </h5>
-              </div>
-              <div class="row">
-                 <h5><b>Descrição:</b>  {{ produto.descricao }} </h5> 
-              </div>
-              <div class="row">
-                 <h5><b>Quantidade:</b> {{ produto.quantidade }} </h5>
-              </div>
-            </div>
+          <div class="row">
+              <div class="col-md-4">
+                  <img class="img-fluid" src='assets/exemplo.jpg/'>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <h5>
+                            Nome produto:
+                            <small class="text-muted">{{ produto.nome }}</small>
+                        </h5>
+                    </div>
+                    <div class="row">
+                        <h5>
+                            Descrição:
+                            <small class="text-muted">{{ produto.descricao }}</small>
+                        </h5> 
+                    </div>
+                    <div class="row">
+                        <h5>
+                            Quantidade:
+                            <small class="text-muted">{{ produto.quantidade }}</small>
+                        </h5>
+                    </div>
+                  </div>
+          </div>
             <hr>
-            <h5>Ofertante</h5>
+            <h4>Informações Ofertante</h4>
             <hr>
             <div class="col-md-8">
               <div class="row">
-                 <h5><b>Nome ofertante:</b> </h5>
-                 <h5><b>Sobrenome:</b>  </h5>
+                  <h5>
+                      Nome:
+                      <small class="text-muted">Caio Vinicius</small>
+                    </h5>
               </div>
               <div class="row">
-                 <h5><b>Email:</b>  </h5> 
+                  <h5>
+                      Localização:
+                      <small class="text-muted">Cajamar - SP</small>
+                  </h5>
+              </div> 
+              <div class="row">
+                  <h5>
+                      Email:
+                      <small class="text-muted">Caio.b.santos@hotmail.com</small>
+                  </h5>
               </div>  
             </div>
       </div>

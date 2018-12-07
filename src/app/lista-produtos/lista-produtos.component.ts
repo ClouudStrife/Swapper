@@ -45,16 +45,15 @@ export class ListaProdutosComponent implements OnInit {
         id_anunciante: this.usuarioLogado.id,
         data: Date.now()
       }})
-      .subscribe(res => res)
+      .subscribe(res => window.alert("Anúncio realizado com sucesso"))
     }
     else if (this.var == 'oferta'){
-      console.log(this.usuarioLogado.id)
       this.http.post(this.URL + '/user/' + this.usuarioLogado.id + '/produto/' + idProduto + '/proposta/' + this.anuncioID,
        { proposta:  {
          data_criacao: '10/10/1000',
          mensagem: 'oi'
        }})
-      .subscribe( res => res)
+      .subscribe( res => window.alert("Oferta realizada com sucesso"))
     }
   }
 

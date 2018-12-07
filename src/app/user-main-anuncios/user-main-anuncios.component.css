@@ -34,6 +34,7 @@
     cursor: pointer;
     background-color: #2d2d2d;
     transition: .4s;
+    color: white;
 }
 
 .container{
@@ -43,4 +44,18 @@
 
 label{
     display: none;
+}
+
+.modal-header{
+    background-color: #3e443f;
+    color: white;
+    font-family: sans-serif;
+}
+
+.img-fluid{
+    width: 15rem;
+}
+
+.h4{
+    font-family: unset;
 }
