@@ -24,7 +24,7 @@ const appRoutes: Routes = [
   { path: 'userMain', component: UserMainComponent},
   { path: 'productRegister', component: ProductRegisterComponent},
   { path: 'anuncios/:categoria', component: AnunciosComponent},
-  { path: 'anuncio', component: AnuncioRegistroComponent}
+  { path: 'lista/:var/:idOptional', component: AnuncioRegistroComponent},
 ];
 
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from '../user-main-products/produto';
 import { HttpClient } from '@angular/common/http';
 import { Anuncios } from '../anuncios';
@@ -15,9 +15,10 @@ export class AnunciosComponent implements OnInit {
   categoria:string; 
   produtos:Produto[] = [];
   anuncios:Anuncios[] = [];
-  URL = "http://localhost:3000"
+  rota:string = '/lista/oferta/';
+  URL = "http://localhost:3000";
 
-  constructor(private route: ActivatedRoute, private http:HttpClient) { }
+  constructor(private route: ActivatedRoute, private http:HttpClient, private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -29,5 +30,11 @@ export class AnunciosComponent implements OnInit {
     .subscribe( res => {
       this.anuncios = res;
     })
+  }
+
+  setRota(anuncioID){
+    console.log(anuncioID);
+    this.rota += anuncioID;
+    this.router.navigate ([this.rota]);
   }
 }
