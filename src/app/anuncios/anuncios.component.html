@@ -6,15 +6,38 @@
   </div>
   <div class="subTitle">
     <h2> {{ categoria }} </h2>
+    <br>
+    <hr>
   </div>
 
   <div class="container">
-      <div class="card" style="width: 13rem;">
-          <img class="card-img-top" src="./assets/exemplo.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">De: nome anunciador</p>
-          </div>
-        </div>
+     <div class="row justify-content-center">
+
+            <h1 class="display-5" *ngIf="anuncios.length == 0">
+                Nenhum anúncio criado nessa categoria
+            </h1>
+            <div class="card" *ngFor=" let anuncio of anuncios">
+                <img class="card-img-top" src="./assets/exemplo.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <div class="row justify-content-center">
+                        <label class="lblAnuncioID">  {{ anuncio.id }} </label>
+                        <h5 class="card-title">{{ anuncio.nome }}</h5>
+                    </div>
+                    <div class="row justify-content-center">
+                        <h5>
+                            Anunciador
+                            <small class="text-muted"> {{ anuncio.nome }} </small>
+                        </h5>
+                    </div>
+                    <div class="row justify-content-center">
+                        <h5>
+                            Data:
+                            <small class="text-muted"> 07/12/2018 </small>
+                        </h5>
+                    </div> 
+                
+                </div>
+            </div>
+     </div>
   </div>
 </div>
