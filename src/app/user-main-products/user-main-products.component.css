@@ -26,9 +26,17 @@
 }
 
 .modal-content{
-    background-color: #066a79;
+    border-radius: 0;
+    border: none;
+    
+}
+
+.modal-header{
+    background-color: #3d908b;
     color: white;
-    font: arial;
+    font-family: sans-serif;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 #close{

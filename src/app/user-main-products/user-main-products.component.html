@@ -39,7 +39,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h2 class="modal-title" id="exampleModalLabel">Detalhes do produto</h2>
@@ -50,24 +50,39 @@
       <div class="modal-body" *ngFor="let detalheProduto of produto">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-5">
                 <img id="detailImage" class="card-img-top" src='assets/exemplo.jpg' alt="Card image cap">
             </div>
-             <div class="col-md-8">
+             <div class="col-md-7">
                <div class="row">
-                  <h5><b>Nome produto:</b> {{ detalheProduto.nome }} </h5>
+                  <h5>
+                      Nome produto:
+                      <small class="text-muted"> {{ detalheProduto.nome }} </small>
+                  </h5>
                </div>
                <div class="row">
-                  <h5><b>Descrição:</b>  {{ detalheProduto.descricao }} </h5> 
+                  <h5>
+                      Descrição:
+                      <small class="text-muted"> {{ detalheProduto.descricao }} </small>
+                  </h5>
                </div>
                <div class="row">
-                  <h5><b>Quantidade:</b> {{ detalheProduto.quantidade }} </h5>
+                  <h5>
+                      Categoria:
+                      <small class="text-muted"> {{ detalheProduto.categoria }} </small>
+                  </h5>
                </div>
                <div class="row">
-                  <h5><b>Categoria:</b> {{ detalheProduto.categoria }} </h5>
+                  <h5>
+                      Quantidade:
+                      <small class="text-muted"> {{ detalheProduto.quantidade }} </small>
+                  </h5>
                </div>
                <div class="row">
-                  <h5><b>Status:</b> {{ detalheProduto.status }} </h5>
+                  <h5>
+                      Status:
+                      <small class="text-muted"> {{ detalheProduto.status }} </small>
+                  </h5>
                </div>
              </div>
           </div>
